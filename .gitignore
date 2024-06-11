@@ -1,0 +1,5 @@
+integral
+*.o
+.vscode
+build
+.git
