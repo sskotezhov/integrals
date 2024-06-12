@@ -6,9 +6,9 @@ global f1
 global f2
 global f3
 
-global f3_der
-global f2_der
-global f1_der
+global f3_deriative
+global f2_deriative
+global f1_deriative
 
 f1:
     finit
@@ -70,7 +70,7 @@ f3:
     fdivp
     ret 
 
-f3_der:
+f3_deriative:
     finit
     sub esp, 8
     push dword[esp+16]
@@ -80,7 +80,7 @@ f3_der:
     fchs
     ret
     
-f2_der:
+f2_deriative:
     fld qword[esp+4]
     fld qword[half]
     faddp
@@ -94,7 +94,7 @@ f2_der:
     fdivp
     ret
 
-f1_der:
+f1_deriative:
     finit
     fld qword[esp+4]
     fld1

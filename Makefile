@@ -13,8 +13,12 @@ OBJS = BuildDir/main.o BuildDir/function.o
 TARGET = integral
 
 
-all: $(OBJS)
+all: make_dir $(OBJS)
 	gcc -m32 -o $(TARGET) $(OBJS) $(LDLIBS)
+
+OBJS_TEST = BuildDir/test.o BuildDir/test_functions.o
+test: make_dir $(OBJS_TEST)
+	gcc -m32 -o $(TARGET) $(OBJS_TEST) $(LDLIBS)
 
 make_dir:
 	mkdir -p BuildDir
